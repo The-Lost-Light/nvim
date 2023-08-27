@@ -1,6 +1,10 @@
 return {
 	"nvim-lualine/lualine.nvim",
 	dependencies = {"nvim-tree/nvim-web-devicons"},
-	options = {theme = "ayu"},
-	config = true
+	event = "VimEnter",
+	opts = {
+		options = {
+			theme = "ayu"
+		}
+	}
 }
