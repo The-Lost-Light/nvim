@@ -1,18 +1,16 @@
+vim.loader.enable() -- byte-compiles and caches Lua files
 -- system
 require("config")
 require("keymaps")
 
 -- lazy.nvim
-require("lazynvim")
+require("lazy-nvim")
 
--- lsp
-require("lsp")
+-- theme
+require("theme")
 
-dashboard_custom_header = {
-	"███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗",
-	"████╗  ██║ ██╔════╝██╔═══██╗ ██║   ██║ ██║ ████╗ ████║",
-	"██╔██╗ ██║ █████╗  ██║   ██║ ██║   ██║ ██║ ██╔████╔██║",
-	"██║╚██╗██║ ██╔══╝  ██║   ██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║",
-	"██║ ╚████║ ███████╗╚██████╔╝  ╚████╔╝  ██║ ██║ ╚═╝ ██║",
-	"╚═╝  ╚═══╝ ╚══════╝ ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝",
-	}
+-- temporary fix the folding bug when use telescope open file
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
+	pattern = { "*" },
+	command = "normal zx zR"
+})
