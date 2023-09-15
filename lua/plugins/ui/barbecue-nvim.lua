@@ -6,8 +6,8 @@ return {
 		"SmiteshP/nvim-navic",
 		"nvim-tree/nvim-web-devicons", -- optional dependency
 	},
-	event = "LspAttach",
+	event = "VeryLazy",
 	opts = {
-		-- configurations go here
-	},
+		theme = "tokyonight"
+	}
 }

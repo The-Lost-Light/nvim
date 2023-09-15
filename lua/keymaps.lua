@@ -36,21 +36,21 @@ keymap.set("v", "<S-Down>", ":m '<-2<CR>gv=gv")
 
 
 -- ctrl-c ctrl-v in neovide
-if vim.g.neovide then
-	vim.g.neovide_input_use_logo = 1 -- enable use of the logo (cmd) key
-	keymap.set("n", "<C-s>", ":w<CR>") -- Save
-	keymap.set("n", "<C-x>", "+x") -- Cut
-	keymap.set("v", "<C-c>", "\"+y") -- Copy
-	keymap.set("n", "<C-v>", "\"+P") -- Paste normal mode
-	keymap.set("v", "<C-v>", "\"+P") -- Paste visual mode
-	keymap.set("c", "<C-v>", "<C-R>+") -- Paste command mode
-	keymap.set("i", "<C-v>", "<ESC>l\"+Pli") -- Paste insert mode
-end
+-- if vim.g.neovide then
+-- 	vim.g.neovide_input_use_logo = 1 -- enable use of the logo (cmd) key
+-- 	keymap.set("n", "<C-s>", ":w<CR>") -- Save
+-- 	keymap.set("n", "<C-x>", "+x") -- Cut
+-- 	keymap.set("v", "<C-c>", "\"+y") -- Copy
+-- 	keymap.set("n", "<C-v>", "\"+P") -- Paste normal mode
+-- 	keymap.set("v", "<C-v>", "\"+P") -- Paste visual mode
+-- 	keymap.set("c", "<C-v>", "<C-R>+") -- Paste command mode
+-- 	keymap.set("i", "<C-v>", "<ESC>l\"+Pli") -- Paste insert mode
+-- end
 
 -- Allow clipboard copy paste in neovim
-vim.g.neovide_input_use_logo = 1
-keymap.set("", "<C-v>", "+p<CR>")
-keymap.set("!", "<C-v>", "<C-R>+")
-keymap.set("t", "<C-v>", "<C-R>+")
-keymap.set("v", "<C-v>", "<C-R>+")
+-- vim.g.neovide_input_use_logo = 1
+-- keymap.set("", "<C-v>", "+p<CR>")
+-- keymap.set("!", "<C-v>", "<C-R>+")
+-- keymap.set("t", "<C-v>", "<C-R>+")
+-- keymap.set("v", "<C-v>", "<C-R>+")
 

@@ -9,8 +9,10 @@ require("lazy-nvim")
 -- theme
 require("theme")
 
--- temporary fix the folding bug when use telescope open file
-vim.api.nvim_create_autocmd({ "BufEnter" }, {
-	pattern = { "*" },
-	command = "normal zx zR"
-})
+-- autocmd
+require("autocmd")
+
+-- neovide
+if vim.g.neovide then
+	require("neovide")
+end

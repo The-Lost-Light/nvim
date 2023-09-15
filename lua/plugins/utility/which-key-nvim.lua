@@ -6,10 +6,10 @@ return {
 		vim.o.timeoutlen = 300
 	end,
 	opts = {
-		plugins = {
-			presets = {
-				operators = false,
-			}
-		}
+		-- plugins = {
+		-- 	presets = {
+		-- 		operators = false,
+		-- 	}
+		-- }
 	}
 }
