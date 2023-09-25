@@ -7,6 +7,7 @@ g.neovide_floating_blur_amount_x = 1.5
 g.neovide_floating_blur_amount_y = 1.5
 g.neovide_hide_mouse_when_typing = true
 g.neovide_underline_automatic_scaling = true
+g.neovide_refreash_rate = 60
 g.neovide_remember_window_size = true
 g.neovide_cursor_animate_in_insert_mode = true
 g.neovide_cursor_animate_command_line = true

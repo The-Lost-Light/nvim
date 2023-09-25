@@ -7,14 +7,19 @@ return {
 	lazy = true,
 	opts = {
 		ensure_installed = {
-			"lua_ls",
-			"rust_analyzer",
-			"clangd"
+			"lua_ls"
 		},
 		automatic_installation = true,
 		handlers = {
 			function (server_name)
 				require("lspconfig")[server_name].setup{}
+			end,
+			["lua_ls"] = function ()
+				require("lspconfig").lua_ls.setup {
+					workspace = {
+						checkThirdParty = false
+					}
+				}
 			end,
 			["clangd"] = function ()
 				require("lspconfig").clangd.setup {
